@@ -97,15 +97,18 @@ console.log(finalWinCondition);
 /* Task 2: Create a function called  getFinals that takes `data` as an argument 
 and returns an array of objects with only finals data */
 
-// function getFinals(data) {
-//     let data = 
-//     const finalsOnly = data.filter((stage) => {
-//         return stage.stage = "Final";
-//     })
-// };
+function getFinals(data) {
+   const finalsOnly = [];
+   for (let i=0; i <data.length; i++) {
+       if (data[i].Stage === "Final") {
+           finalsOnly.push(data[i]);
+       };
+   };
+console.log(finalsOnly);
 
-// getFinals();
+}
 
+getFinals(fifaData);
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts 
 the callback function `getFinals`, and returns an array called `years` containing 
